@@ -1,11 +1,11 @@
 <script lang="ts">
 	import type { PageData } from "./$types";
 	import Intro from "$lib/containers/Intro.svelte";
+	import { pb } from "$lib/pocketbase";
 
 	export let data: PageData;
-	console.log(data);
 </script>
 
 <div>
-	<Intro />
+	<Intro mainLogo={pb.files.getUrl(data.response, data.response.main_logo)} />
 </div>

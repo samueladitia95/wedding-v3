@@ -32,7 +32,9 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"clsx": "^2.0.0",
 		"dotenv": "^16.3.1",
-		"pocketbase": "^0.20.1"
+		"pocketbase": "^0.20.1",
+		"svelte-inview": "^4.0.1"
 	}
 }
