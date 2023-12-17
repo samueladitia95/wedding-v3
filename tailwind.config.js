@@ -6,6 +6,9 @@ export default {
 		container: {
 			center: true,
 		},
+		colors: {
+			"ca-orange": "#C25414",
+		},
 	},
 	plugins: [],
 };
