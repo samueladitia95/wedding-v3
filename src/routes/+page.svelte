@@ -1,8 +1,10 @@
 <script lang="ts">
 	import type { PageData } from "./$types";
-	import Intro from "$lib/containers/Intro.svelte";
 	import { pb } from "$lib/pocketbase";
 	import type { RecordModel } from "pocketbase";
+
+	import Intro from "$lib/containers/Intro.svelte";
+	import Invite from "$lib/containers/invite.svelte";
 
 	export let data: PageData;
 
@@ -16,5 +18,11 @@
 	<Intro
 		mainLogo={pb.files.getUrl(data.response, data.response.main_logo)}
 		carauselImages={parseCarausel(data.response)}
+	/>
+	<Invite
+		brideLogo={pb.files.getUrl(data.response, data.response.bride_logo)}
+		groomLogo={pb.files.getUrl(data.response, data.response.groom_logo)}
+		fruitLogo={pb.files.getUrl(data.response, data.response.fruit_logo)}
+		bellLogo={pb.files.getUrl(data.response, data.response.bell_logo)}
 	/>
 </div>

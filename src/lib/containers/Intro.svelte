@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { inview } from "svelte-inview";
 	import { fade } from "svelte/transition";
+	import { onMount } from "svelte";
 	import "@splidejs/svelte-splide/css";
 	import { Splide, SplideSlide } from "@splidejs/svelte-splide";
 	import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
@@ -11,6 +12,11 @@
 
 	let isShow: boolean = false;
 	let isShowCarausel: boolean = false;
+
+	onMount(() => {
+		document.body.classList.add("overflow-hidden");
+		document.body.classList.add("no-scrollbar");
+	});
 
 	const handleChange = ({ detail }: CustomEvent<ObserverEventDetails>): void => {
 		if (!isShow && detail.inView) isShow = true;
@@ -49,7 +55,10 @@
 				class="text-sm md:text-xl bg-white text-ca-brown font-homemade-apple whitespace-nowrap rounded-full px-6 py-3 md:px-8 md:py-4 absolute bottom-36 md:bottom-48 lg:bottom-28 left-1/2 transform -translate-x-1/2 hover:bg-slate-200"
 				in:fade={{ duration: 1500, delay: 1500 }}
 				out:fade={{ duration: 1000, delay: 0 }}
-				on:click={() => (isShowCarausel = true)}
+				on:click={() => {
+					isShowCarausel = true;
+					document.body.classList.remove("overflow-hidden");
+				}}
 			>
 				Open Invitation
 			</button>
