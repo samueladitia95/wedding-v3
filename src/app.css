@@ -24,4 +24,12 @@
 		font-display: swap;
 		font-style: normal;
 	}
+	@font-face {
+		font-family: "Editor Hand";
+		src: local("Editor Hand"), local("Editor-Hand"), local("editor hand"),
+			local("editor-hand"), url("/fonts/Editor_sHand-Regular.otf");
+		font-weight: 400;
+		font-display: swap;
+		font-style: normal;
+	}
 }

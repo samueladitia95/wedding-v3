@@ -11,9 +11,11 @@ export default {
 				"ca-brown": "#4C4A44",
 				"ca-blue": "#1E51A1",
 				"ca-black": "#222222",
+				"ca-red": "#670104",
 			},
 			fontFamily: {
 				"homemade-apple": ["Homemade Apple", ...defaultTheme.fontFamily.sans],
+				"editor-hand": ["Editor Hand", ...defaultTheme.fontFamily.sans],
 			},
 		},
 		container: {
