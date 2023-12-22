@@ -5,7 +5,7 @@
 	import type { RecordModel } from "pocketbase";
 
 	import Intro from "$lib/containers/Intro.svelte";
-	import Invite from "$lib/containers/invite.svelte";
+	import Invite from "$lib/containers/Invite.svelte";
 	import SaveTheDate from "$lib/containers/SaveTheDate.svelte";
 
 	export let data: PageData;
