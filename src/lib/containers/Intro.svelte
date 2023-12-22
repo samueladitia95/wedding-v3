@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { inview } from "svelte-inview";
 	import { fade } from "svelte/transition";
-	import { onMount } from "svelte";
 	import "@splidejs/svelte-splide/css";
 	import { Splide, SplideSlide } from "@splidejs/svelte-splide";
 	import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
@@ -12,11 +11,6 @@
 
 	let isShow: boolean = false;
 	let isShowCarausel: boolean = false;
-
-	onMount(() => {
-		document.body.classList.add("overflow-hidden");
-		document.body.classList.add("no-scrollbar");
-	});
 
 	const handleChange = ({ detail }: CustomEvent<ObserverEventDetails>): void => {
 		if (!isShow && detail.inView) isShow = true;

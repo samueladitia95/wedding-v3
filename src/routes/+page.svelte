@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { onMount } from "svelte";
 	import dayjs from "dayjs";
 	import type { PageData } from "./$types";
 	import { pb } from "$lib/pocketbase";
@@ -14,6 +15,12 @@
 		const result: string[] = data.intro_images.map((item: string) => pb.files.getUrl(data, item));
 		return result;
 	};
+
+	onMount(() => {
+		document.body.classList.add("no-scrollbar");
+		document.body.scrollIntoView(true);
+		document.body.classList.add("overflow-hidden");
+	});
 </script>
 
 <div>
