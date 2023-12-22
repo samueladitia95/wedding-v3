@@ -16,6 +16,7 @@ export default {
 			fontFamily: {
 				"homemade-apple": ["Homemade Apple", ...defaultTheme.fontFamily.sans],
 				"editor-hand": ["Editor Hand", ...defaultTheme.fontFamily.sans],
+				goldenbook: ["Goldenbook", ...defaultTheme.fontFamily.sans],
 			},
 		},
 		container: {

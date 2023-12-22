@@ -8,6 +8,7 @@
 	import Intro from "$lib/containers/Intro.svelte";
 	import Invite from "$lib/containers/Invite.svelte";
 	import SaveTheDate from "$lib/containers/SaveTheDate.svelte";
+	import TheWeddingOf from "$lib/containers/TheWeddingOf.svelte";
 
 	export let data: PageData;
 
@@ -37,5 +38,11 @@
 	<SaveTheDate
 		weddingDay={dayjs(data.response.wedding_date)}
 		saveTheDateImage={pb.files.getUrl(data.response, data.response.save_the_date_image)}
+	/>
+	<TheWeddingOf
+		weddingDay={dayjs(data.response.wedding_date)}
+		groomImage={pb.files.getUrl(data.response, data.response.groom_image)}
+		brideImage={pb.files.getUrl(data.response, data.response.bride_image)}
+		ringLogo={pb.files.getUrl(data.response, data.response.ring_logo)}
 	/>
 </div>
