@@ -21,6 +21,12 @@
 			})
 		: [];
 
+	let galleryImages = data.response.gallery_images
+		? data.response.gallery_images.map((el: string) => {
+				return pb.files.getUrl(data.response, el);
+			})
+		: [];
+
 	const parseCarausel = (data: RecordModel): string[] => {
 		const result: string[] = data.intro_images.map((item: string) => pb.files.getUrl(data, item));
 		return result;
@@ -28,8 +34,8 @@
 
 	onMount(() => {
 		document.body.classList.add("no-scrollbar");
-		document.body.scrollIntoView(true);
-		document.body.classList.add("overflow-hidden");
+		// document.body.scrollIntoView(true);
+		// document.body.classList.add("overflow-hidden");
 	});
 </script>
 
@@ -54,7 +60,7 @@
 		brideImage={pb.files.getUrl(data.response, data.response.bride_image)}
 		ringLogo={pb.files.getUrl(data.response, data.response.ring_logo)}
 	/>
-	<Detail {scheduleImages} />
+	<Detail {scheduleImages} {galleryImages} />
 	<QnA flowerLogo={pb.files.getUrl(data.response, data.response.flower_logo)} />
 	<QrCode qrCodeImage={pb.files.getUrl(data.response, data.response.qr_code_image)} />
 </div>

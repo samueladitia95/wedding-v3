@@ -3,6 +3,7 @@
 	import { fade } from "svelte/transition";
 
 	export let scheduleImages: string[];
+	export let galleryImages: string[];
 
 	const schedules = [
 		{
@@ -56,6 +57,7 @@
 		>
 			<div>
 				<div class="text-center text-ca-blue text-3xl mb-10">The Details</div>
+
 				<div class="flex flex-col items-center gap-14">
 					{#each schedules as schedule}
 						<div class="flex flex-col items-center gap-2">
@@ -75,6 +77,15 @@
 							{/if}
 						</div>
 					{/each}
+				</div>
+
+				<div class="flex flex-col gap-6 w-full mt-28">
+					<img src={galleryImages[0]} alt="gallery" class="h-[525px] object-cover" />
+					<div class="grid grid-cols-2 gap-6 w-full">
+						<img src={galleryImages[1]} alt="gallery" class="h-full object-cover" />
+						<img src={galleryImages[2]} alt="gallery" class="h-full object-cover" />
+					</div>
+					<img src={galleryImages[3]} alt="gallery" class="h-[228px] object-cover" />
 				</div>
 			</div>
 		</div>
