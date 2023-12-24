@@ -11,8 +11,15 @@
 	import TheWeddingOf from "$lib/containers/TheWeddingOf.svelte";
 	import QnA from "$lib/containers/QnA.svelte";
 	import QrCode from "$lib/containers/QrCode.svelte";
+	import Detail from "$lib/containers/Detail.svelte";
 
 	export let data: PageData;
+
+	let scheduleImages = data.response.schedules_images
+		? data.response.schedules_images.map((el: string) => {
+				return pb.files.getUrl(data.response, el);
+			})
+		: [];
 
 	const parseCarausel = (data: RecordModel): string[] => {
 		const result: string[] = data.intro_images.map((item: string) => pb.files.getUrl(data, item));
@@ -47,6 +54,7 @@
 		brideImage={pb.files.getUrl(data.response, data.response.bride_image)}
 		ringLogo={pb.files.getUrl(data.response, data.response.ring_logo)}
 	/>
+	<Detail {scheduleImages} />
 	<QnA flowerLogo={pb.files.getUrl(data.response, data.response.flower_logo)} />
 	<QrCode qrCodeImage={pb.files.getUrl(data.response, data.response.qr_code_image)} />
 </div>
