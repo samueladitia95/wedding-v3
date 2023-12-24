@@ -10,6 +10,7 @@
 	import SaveTheDate from "$lib/containers/SaveTheDate.svelte";
 	import TheWeddingOf from "$lib/containers/TheWeddingOf.svelte";
 	import QnA from "$lib/containers/QnA.svelte";
+	import QrCode from "$lib/containers/QrCode.svelte";
 
 	export let data: PageData;
 
@@ -47,4 +48,5 @@
 		ringLogo={pb.files.getUrl(data.response, data.response.ring_logo)}
 	/>
 	<QnA flowerLogo={pb.files.getUrl(data.response, data.response.flower_logo)} />
+	<QrCode qrCodeImage={pb.files.getUrl(data.response, data.response.qr_code_image)} />
 </div>
