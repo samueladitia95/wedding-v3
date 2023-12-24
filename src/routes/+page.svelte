@@ -9,6 +9,7 @@
 	import Invite from "$lib/containers/Invite.svelte";
 	import SaveTheDate from "$lib/containers/SaveTheDate.svelte";
 	import TheWeddingOf from "$lib/containers/TheWeddingOf.svelte";
+	import QnA from "$lib/containers/QnA.svelte";
 
 	export let data: PageData;
 
@@ -45,4 +46,5 @@
 		brideImage={pb.files.getUrl(data.response, data.response.bride_image)}
 		ringLogo={pb.files.getUrl(data.response, data.response.ring_logo)}
 	/>
+	<QnA flowerLogo={pb.files.getUrl(data.response, data.response.flower_logo)} />
 </div>
