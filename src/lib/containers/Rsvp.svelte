@@ -27,16 +27,21 @@
 </script>
 
 <div
-	class="bg-white min-h-screen w-screen overflow-hidden"
+	class="bg-white min-h-screen w-screen overflow-hidden relative"
 	use:inview={{
 		rootMargin: "0px",
 		unobserveOnEnter: true,
 	}}
 	on:inview_change={handleChange}
 >
-	{#if isShow}
-		<div class="h-full w-full container py-28 md:py-36 relative" in:fade={{ duration: 1000, delay: 500 }}>
-			<div class="font-homemade-apple text-ca-blue text-5xl -rotate-6 mb-8 md:mb-14 lg:mb-24">Rsvp!</div>
+	{#if isShow && !isSuccess}
+		<div
+			class="h-full w-full container py-28 md:py-36 relative"
+			in:fade={{ duration: 1000, delay: 500 }}
+		>
+			<div class="font-homemade-apple text-ca-blue text-5xl -rotate-6 mb-8 md:mb-14 lg:mb-24">
+				Rsvp!
+			</div>
 			<div class="font-editor-hand text-ca-orange text-xl md:text-2xl">Due Date : {dueDate}</div>
 
 			<form class="mt-12 flex flex-col gap-10" use:enhance method="POST" action="/">
@@ -96,6 +101,19 @@
 					Submit
 				</button>
 			</form>
+		</div>
+	{:else if isSuccess}
+		<div class="h-full w-full container" in:fade={{ duration: 1000, delay: 0 }}>
+			<div
+				class="flex flex-col gap-8 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-5/6"
+			>
+				<div class="font-homemade-apple text-5xl text-ca-blue -rotate-2 text-center">
+					Thank You!
+				</div>
+				<div class="font-homemade-apple text-2xl text-ca-orange text-center">
+					We’ll see you there!
+				</div>
+			</div>
 		</div>
 	{/if}
 </div>
