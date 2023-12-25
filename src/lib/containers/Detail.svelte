@@ -53,7 +53,7 @@
 >
 	{#if isShow}
 		<div
-			class="h-full w-full container py-28 font-homemade-apple relative"
+			class="h-full w-full container max-w-md py-28 font-homemade-apple relative"
 			in:fade={{ duration: 0, delay: 0 }}
 		>
 			<div>
@@ -82,7 +82,7 @@
 
 				<div class="flex flex-col gap-6 w-full my-40 relative">
 					<div
-						class="absolute -top-20 -left-2 -rotate-12 font-homemade-apple text-3xl/relaxed text-ca-blue"
+						class="absolute -top-20 -left-2 md:-left-28 md:max-w-sm -rotate-12 font-homemade-apple text-3xl/relaxed text-ca-blue"
 					>
 						Come join this joyous union with us!
 					</div>
@@ -92,12 +92,12 @@
 						<img src={galleryImages[2]} alt="gallery" class="h-full object-cover" />
 					</div>
 					<img src={galleryImages[3]} alt="gallery" class="h-[228px] object-cover" />
-					<div class="absolute -bottom-20 -rotate-6 text-2xl/loose text-right text-ca-orange">
+					<div class="absolute -bottom-20 -rotate-6 md:-right-24 text-2xl/loose text-right text-ca-orange">
 						Good food, great people, let’s celebrate!
 					</div>
 				</div>
 			</div>
-			<img src={musicLogo} alt="music logo" class="absolute bottom-20 left-4 h-20" />
+			<img src={musicLogo} alt="music logo" class="absolute bottom-44 left-4 h-20" />
 		</div>
 	{/if}
 </div>
