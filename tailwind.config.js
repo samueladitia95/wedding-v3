@@ -12,6 +12,7 @@ export default {
 				"ca-blue": "#1E51A1",
 				"ca-black": "#222222",
 				"ca-red": "#670104",
+				"ca-error": "#FF3E3E",
 			},
 			fontFamily: {
 				"homemade-apple": ["Homemade Apple", ...defaultTheme.fontFamily.sans],
