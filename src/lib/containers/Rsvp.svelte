@@ -23,9 +23,6 @@
 				isSuccess = true;
 			}
 		},
-		onSubmit({ formData }) {
-			console.log(formData);
-		},
 	});
 </script>
 
@@ -42,7 +39,7 @@
 			<div class="font-homemade-apple text-ca-blue text-5xl -rotate-6 mb-8">Rsvp!</div>
 			<div class="font-editor-hand text-ca-orange text-xl">Due Date : {dueDate}</div>
 
-			<form class="mt-12 flex flex-col gap-10" use:enhance method="POST">
+			<form class="mt-12 flex flex-col gap-10" use:enhance method="POST" action="/">
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-6">
 					<Input
 						name="firstName"
@@ -62,7 +59,7 @@
 						bind:value={$form.phoneNumber}
 						error={$errors.phoneNumber}
 					/>
-          <Input name="email" label="EMAIL" bind:value={$form.email} error={$errors.email} />
+					<Input name="email" label="EMAIL" bind:value={$form.email} error={$errors.email} />
 				</div>
 				<div>
 					<div class="font-editor-hand text-ca-blue">
