@@ -28,7 +28,7 @@
 	{#if isShow && !isShowCarausel}
 		<div class="container h-full w-full relative">
 			<div
-				class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-3 md:gap-6 text-ca-creme"
+				class="absolute top-1/3 md:top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-3 md:gap-6 text-ca-creme"
 			>
 				<img
 					src={mainLogo}
