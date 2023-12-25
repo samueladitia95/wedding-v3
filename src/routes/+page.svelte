@@ -60,7 +60,11 @@
 		brideImage={pb.files.getUrl(data.response, data.response.bride_image)}
 		ringLogo={pb.files.getUrl(data.response, data.response.ring_logo)}
 	/>
-	<Detail {scheduleImages} {galleryImages} />
+	<Detail
+		{scheduleImages}
+		{galleryImages}
+		musicLogo={pb.files.getUrl(data.response, data.response.music_logo)}
+	/>
 	<QnA flowerLogo={pb.files.getUrl(data.response, data.response.flower_logo)} />
 	<QrCode qrCodeImage={pb.files.getUrl(data.response, data.response.qr_code_image)} />
 </div>

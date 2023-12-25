@@ -4,6 +4,7 @@
 
 	export let scheduleImages: string[];
 	export let galleryImages: string[];
+	export let musicLogo: string;
 
 	const schedules = [
 		{
@@ -52,7 +53,7 @@
 >
 	{#if isShow}
 		<div
-			class="h-full w-full container py-20 font-homemade-apple"
+			class="h-full w-full container py-28 font-homemade-apple relative"
 			in:fade={{ duration: 0, delay: 0 }}
 		>
 			<div>
@@ -79,15 +80,24 @@
 					{/each}
 				</div>
 
-				<div class="flex flex-col gap-6 w-full mt-28">
+				<div class="flex flex-col gap-6 w-full my-40 relative">
+					<div
+						class="absolute -top-20 -left-2 -rotate-12 font-homemade-apple text-3xl/relaxed text-ca-blue"
+					>
+						Come join this joyous union with us!
+					</div>
 					<img src={galleryImages[0]} alt="gallery" class="h-[525px] object-cover" />
 					<div class="grid grid-cols-2 gap-6 w-full">
 						<img src={galleryImages[1]} alt="gallery" class="h-full object-cover" />
 						<img src={galleryImages[2]} alt="gallery" class="h-full object-cover" />
 					</div>
 					<img src={galleryImages[3]} alt="gallery" class="h-[228px] object-cover" />
+					<div class="absolute -bottom-20 -rotate-6 text-2xl/loose text-right text-ca-orange">
+						Good food, great people, let’s celebrate!
+					</div>
 				</div>
 			</div>
+			<img src={musicLogo} alt="music logo" class="absolute bottom-20 left-4 h-20" />
 		</div>
 	{/if}
 </div>
