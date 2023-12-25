@@ -46,7 +46,7 @@
 				</div>
 			</div>
 			<button
-				class="text-sm md:text-xl bg-white text-ca-brown font-homemade-apple whitespace-nowrap rounded-full px-6 py-3 md:px-8 md:py-4 absolute bottom-36 md:bottom-48 lg:bottom-28 left-1/2 transform -translate-x-1/2 hover:bg-slate-200"
+				class="text-sm md:text-xl bg-white text-ca-brown font-homemade-apple whitespace-nowrap rounded-full px-6 py-3 md:px-8 md:py-4 absolute bottom-52 lg:bottom-28 left-1/2 transform -translate-x-1/2 hover:bg-slate-200"
 				in:fade={{ duration: 1500, delay: 1500 }}
 				out:fade={{ duration: 1000, delay: 0 }}
 				on:click={() => {
