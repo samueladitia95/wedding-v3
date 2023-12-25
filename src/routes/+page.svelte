@@ -42,6 +42,10 @@
 	});
 </script>
 
+<svelte:head>
+	<meta name="theme-color" content="#C25414" />
+</svelte:head>
+
 <div>
 	<Intro
 		mainLogo={pb.files.getUrl(data.response, data.response.main_logo)}
