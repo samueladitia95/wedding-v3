@@ -97,7 +97,7 @@
 					</div>
 				</div>
 			</div>
-			<img src={musicLogo} alt="music logo" class="absolute bottom-44 left-4 h-20" />
+			<img src={musicLogo} alt="music logo" class="absolute bottom-20 md:bottom-44 left-4 h-20" />
 		</div>
 	{/if}
 </div>
