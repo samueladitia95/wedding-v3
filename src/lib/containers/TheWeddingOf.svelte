@@ -44,7 +44,11 @@
 					class="flex flex-col items-center gap-4"
 					in:fly={{ duration: 1000, delay: 1000, x: -200 }}
 				>
-					<img src={groomImage} alt="Groom" class="h-40 md:h-80 object-cover rounded" />
+					<img
+						src={groomImage}
+						alt="Groom"
+						class="w-40 md:w-48 h-60 md:h-80 object-cover rounded"
+					/>
 					<div class="font-goldenbook text-4xl md:text-5xl">{groomNickname}</div>
 					<div class="font-homemade-apple text-xl md:text-2xl">{groomFullname}</div>
 				</div>
@@ -60,7 +64,11 @@
 					class="flex flex-col items-center gap-4"
 					in:fly={{ duration: 1000, delay: 1000, x: 200 }}
 				>
-					<img src={brideImage} alt="Bride" class="h-40 md:h-80 object-cover rounded" />
+					<img
+						src={brideImage}
+						alt="Bride"
+						class="w-40 md:w-48 h-60 md:h-80 object-cover rounded object-[12%]"
+					/>
 					<div class="font-goldenbook text-4xl md:text-5xl">{brideNickName}</div>
 					<div class="font-homemade-apple text-xl md:text-2xl">{brideFullname}</div>
 				</div>
