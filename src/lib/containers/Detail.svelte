@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { inview } from "svelte-inview";
-	import { fade } from "svelte/transition";
+	import { fade, fly } from "svelte/transition";
 
 	export let scheduleImages: string[];
 	export let galleryImages: string[];
@@ -51,17 +51,19 @@
 	}}
 	on:inview_change={handleChange}
 >
-	{#if isShow}
-		<div
-			class="h-full w-full container max-w-md py-28 font-homemade-apple relative"
-			in:fade={{ duration: 0, delay: 0 }}
-		>
-			<div>
-				<div class="text-center text-ca-blue text-3xl mb-10">The Details</div>
+	<div class="h-full w-full container max-w-md py-28 font-homemade-apple relative">
+		<div>
+			<div class="text-center text-ca-blue text-3xl mb-10" in:fade={{ duration: 1000, delay: 500 }}>
+				The Details
+			</div>
 
-				<div class="flex flex-col items-center gap-14">
-					{#each schedules as schedule}
-						<div class="flex flex-col items-center gap-2">
+			<div class="flex flex-col items-center gap-14">
+				{#each schedules as schedule, index}
+					{#if isShow}
+						<div
+							class="flex flex-col items-center gap-2"
+							transition:fly={{ x: -200, duration: 1000, delay: 300 * (index + 1) }}
+						>
 							<img src={schedule.icon} alt="Icon" class="w-16 object-cover" />
 							<div class="text-2xl text-ca-blue">{schedule.event}</div>
 							<div class="text-xl text-ca-blue">{schedule.time}</div>
@@ -77,10 +79,15 @@
 								</div>
 							{/if}
 						</div>
-					{/each}
-				</div>
+					{/if}
+				{/each}
+			</div>
 
-				<div class="flex flex-col gap-6 w-full my-40 relative">
+			{#if isShow}
+				<div
+					class="flex flex-col gap-6 w-full my-40 relative"
+					in:fade={{ duration: 1000, delay: 1500 }}
+				>
 					<div
 						class="absolute -top-20 -left-2 md:-left-28 md:max-w-sm -rotate-12 font-homemade-apple text-3xl/relaxed text-ca-blue"
 					>
@@ -92,12 +99,21 @@
 						<img src={galleryImages[2]} alt="gallery" class="h-full object-cover" />
 					</div>
 					<img src={galleryImages[3]} alt="gallery" class="h-[228px] object-cover" />
-					<div class="absolute -bottom-20 -rotate-6 md:-right-24 text-2xl/loose text-right text-ca-orange">
+					<div
+						class="absolute -bottom-20 -rotate-6 md:-right-24 text-2xl/loose text-right text-ca-orange"
+					>
 						Good food, great people, let’s celebrate!
 					</div>
 				</div>
-			</div>
-			<img src={musicLogo} alt="music logo" class="absolute bottom-20 md:bottom-44 left-4 h-20" />
+			{/if}
 		</div>
-	{/if}
+		{#if isShow}
+			<img
+				src={musicLogo}
+				alt="music logo"
+				class="absolute bottom-20 md:bottom-44 left-4 h-20"
+				in:fade={{ duration: 1000, delay: 1500 }}
+			/>
+		{/if}
+	</div>
 </div>
