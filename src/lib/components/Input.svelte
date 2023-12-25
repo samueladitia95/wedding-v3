@@ -10,7 +10,7 @@
 <div class="relative h-11 w-full font-editor-hand">
 	<input
 		placeholder={label}
-		class="peer h-full w-full border-b border-ca-blue bg-transparent pt-4 pb-1.5 text-ca-orange outline outline-0 transition-all placeholder-shown:border-ca-blue focus:text-ca-orange focus:outline-0 placeholder:opacity-0 focus:placeholder:opacity-100"
+		class="peer h-full w-full border-b border-ca-blue bg-transparent pt-4 pb-1.5 text-ca-orange outline outline-0 transition-all placeholder-shown:border-ca-blue focus:text-ca-orange focus:outline-0 placeholder:opacity-0 focus:placeholder:opacity-100 md:text-xl"
 		bind:value
 		required
 		{name}

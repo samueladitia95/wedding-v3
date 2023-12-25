@@ -35,9 +35,9 @@
 	on:inview_change={handleChange}
 >
 	{#if isShow}
-		<div class="h-full w-full container py-28 relative" in:fade={{ duration: 0, delay: 0 }}>
-			<div class="font-homemade-apple text-ca-blue text-5xl -rotate-6 mb-8">Rsvp!</div>
-			<div class="font-editor-hand text-ca-orange text-xl">Due Date : {dueDate}</div>
+		<div class="h-full w-full container py-28 relative" in:fade={{ duration: 1000, delay: 500 }}>
+			<div class="font-homemade-apple text-ca-blue text-5xl -rotate-6 mb-8 md:mb-14">Rsvp!</div>
+			<div class="font-editor-hand text-ca-orange text-xl md:text-2xl">Due Date : {dueDate}</div>
 
 			<form class="mt-12 flex flex-col gap-10" use:enhance method="POST" action="/">
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-6">
@@ -62,10 +62,10 @@
 					<Input name="email" label="EMAIL" bind:value={$form.email} error={$errors.email} />
 				</div>
 				<div>
-					<div class="font-editor-hand text-ca-blue">
+					<div class="font-editor-hand text-ca-blue md:text-xl">
 						Will you be attending the wedding?<span class="text-ca-error">*</span>
 					</div>
-					<div class="flex gap-12 w-full ml-3 mt-3">
+					<div class="flex gap-12 md:gap-28 w-full ml-3 mt-3">
 						<div class="flex gap-2 items-center">
 							<input
 								name="subject"
