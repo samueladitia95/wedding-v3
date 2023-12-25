@@ -103,16 +103,16 @@
 			{#each qna as qa, index}
 				{#if isShow}
 					<div
-						class="font-editor-hand flex flex-col w-full"
+						class="font-editor-hand flex flex-col"
 						transition:fly={{ x: -200, duration: 1000, delay: 200 * (index + 1) }}
 					>
 						<button
-							class="flex justify-between items-center gap-2"
+							class="flex justify-between items-center gap-2 w-full"
 							on:click={() => {
 								handleOpenAccordion(index, !qa.isOpen);
 							}}
 						>
-							<div class="text-3xl">Q: <span class="text-xl md:text-2xl">{qa.question}</span></div>
+							<div class="text-3xl text-left">Q: <span class="text-xl md:text-2xl">{qa.question}</span></div>
 							<div class="text-4xl font-sans">
 								{qa.isOpen ? "-" : "+"}
 							</div>
