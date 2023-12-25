@@ -71,6 +71,8 @@
 					gap: "0px",
 					autoScroll: {
 						rewind: true,
+						pauseOnFocus: false,
+						pauseOnHover: false
 					},
 					autoWidth: true,
 				}}

@@ -29,14 +29,16 @@
 		: [];
 
 	const parseCarausel = (data: RecordModel): string[] => {
-		const result: string[] = data.intro_images.map((item: string) => pb.files.getUrl(data, item));
+		const result: string[] = data.intro_images.map((item: string) =>
+			pb.files.getUrl(data, item, { thumb: "1920x1080" }),
+		);
 		return result;
 	};
 
 	onMount(() => {
 		document.body.classList.add("no-scrollbar");
-		// document.body.scrollIntoView(true);
-		// document.body.classList.add("overflow-hidden");
+		document.body.scrollIntoView(true);
+		document.body.classList.add("overflow-hidden");
 	});
 </script>
 
@@ -67,6 +69,6 @@
 		musicLogo={pb.files.getUrl(data.response, data.response.music_logo)}
 	/>
 	<QnA flowerLogo={pb.files.getUrl(data.response, data.response.flower_logo)} />
-	<Rsvp data={data} />
+	<Rsvp {data} />
 	<QrCode qrCodeImage={pb.files.getUrl(data.response, data.response.qr_code_image)} />
 </div>
