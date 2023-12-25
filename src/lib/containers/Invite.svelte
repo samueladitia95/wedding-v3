@@ -59,12 +59,17 @@
 				class="absolute bottom-0 right-0 w-48 object-cover -rotate-4"
 				in:fly={{ duration: 1000, delay: 500, x: 100, y: 100 }}
 			/>
-			<div
+			<button
 				class="absolute bottom-8 left-8 text-sm/loose md:text-xl/loose text-ca-black font-homemade-apple cursor-pointer w-28 md:w-40"
 				in:fly={{ duration: 1000, delay: 500, x: -100, y: 100 }}
+				on:click={() => {
+					document.getElementById("save-the-date")?.scrollIntoView({
+						behavior: "smooth",
+					});
+				}}
 			>
 				Scroll down please!
-			</div>
+			</button>
 		</div>
 	{/if}
 </div>
