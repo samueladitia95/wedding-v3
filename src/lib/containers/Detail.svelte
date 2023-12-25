@@ -95,8 +95,8 @@
 					</div>
 					<img src={galleryImages[0]} alt="gallery" class="h-[525px] object-cover" />
 					<div class="grid grid-cols-2 gap-6 w-full">
-						<img src={galleryImages[1]} alt="gallery" class="h-full object-cover" />
-						<img src={galleryImages[2]} alt="gallery" class="h-full object-cover" />
+						<img src={galleryImages[1]} alt="gallery" class="h-60 object-cover" />
+						<img src={galleryImages[2]} alt="gallery" class="h-60 object-cover" />
 					</div>
 					<img src={galleryImages[3]} alt="gallery" class="h-[228px] object-cover" />
 					<div
