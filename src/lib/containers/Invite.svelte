@@ -2,8 +2,8 @@
 	import { inview } from "svelte-inview";
 	import { fade, fly } from "svelte/transition";
 
-	export let groomLogo: string;
-	export let brideLogo: string;
+	export let ribbonLogo: string;
+	export let cakeLogo: string;
 	export let fruitLogo: string;
 	export let bellLogo: string;
 
@@ -42,7 +42,7 @@
 			</div>
 
 			<img
-				src={groomLogo}
+				src={ribbonLogo}
 				alt="Groom Logo"
 				class="absolute top-10 left-0 w-32 md:w-44 object-cover rotate-6"
 				in:fly={{ duration: 1000, delay: 500, x: -100 }}
@@ -54,9 +54,9 @@
 				in:fly={{ duration: 1000, delay: 500, x: 100, y: -100 }}
 			/>
 			<img
-				src={brideLogo}
+				src={cakeLogo}
 				alt="Bride Logo"
-				class="absolute bottom-0 right-0 w-32 md:w-44 object-cover -rotate-4"
+				class="absolute bottom-0 right-0 w-48 object-cover -rotate-4"
 				in:fly={{ duration: 1000, delay: 500, x: 100, y: 100 }}
 			/>
 			<div

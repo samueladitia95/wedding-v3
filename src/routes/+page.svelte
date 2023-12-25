@@ -48,8 +48,8 @@
 		carauselImages={parseCarausel(data.response)}
 	/>
 	<Invite
-		brideLogo={pb.files.getUrl(data.response, data.response.bride_logo)}
-		groomLogo={pb.files.getUrl(data.response, data.response.groom_logo)}
+		ribbonLogo={pb.files.getUrl(data.response, data.response.ribbon_logo)}
+		cakeLogo={pb.files.getUrl(data.response, data.response.cake_logo)}
 		fruitLogo={pb.files.getUrl(data.response, data.response.fruit_logo)}
 		bellLogo={pb.files.getUrl(data.response, data.response.bell_logo)}
 	/>
