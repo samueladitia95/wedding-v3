@@ -76,7 +76,8 @@
 					autoWidth: true,
 					autoplay: true,
 					rewind: true,
-					interval: 3000
+					interval: 3000,
+					easing: "ease"
 				}}
 			>
 				{#each carauselImages as image}
