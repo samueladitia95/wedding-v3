@@ -13,6 +13,7 @@
 	import QrCode from "$lib/containers/QrCode.svelte";
 	import Detail from "$lib/containers/Detail.svelte";
 	import Rsvp from "$lib/containers/Rsvp.svelte";
+	import Wishes from "$lib/containers/Wishes.svelte";
 
 	export let data: PageData;
 
@@ -37,8 +38,8 @@
 
 	onMount(() => {
 		document.body.classList.add("no-scrollbar");
-		document.body.scrollIntoView(true);
-		document.body.classList.add("overflow-hidden");
+		// document.body.scrollIntoView(true);
+		// document.body.classList.add("overflow-hidden");
 	});
 </script>
 
@@ -74,5 +75,6 @@
 	/>
 	<QnA flowerLogo={pb.files.getUrl(data.response, data.response.flower_logo)} />
 	<Rsvp {data} />
+	<Wishes {data} />
 	<QrCode qrCodeImage={pb.files.getUrl(data.response, data.response.qr_code_image)} />
 </div>

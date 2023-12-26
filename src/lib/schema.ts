@@ -27,3 +27,17 @@ export const schemaRsvp = z
 			.default(true),
 	})
 	.required();
+
+export const _schemaWishes = z
+	.object({
+		name: z
+			.string({ required_error: "Name is Required" })
+			.trim()
+			.min(1, { message: "Name is Required" }),
+		wishes: z
+			.string({ required_error: "Wishes is Required" })
+			.trim()
+			.min(12, { message: "Your wishes should have minimum 12 characters" })
+			.max(255, { message: "Your wishes should have maximum 255 characters" }),
+	})
+	.required();
