@@ -1,13 +1,10 @@
 <script lang="ts">
 	import { inview } from "svelte-inview";
 	import { fade } from "svelte/transition";
-	import "@splidejs/svelte-splide/css";
-	import { Splide, SplideSlide } from "@splidejs/svelte-splide";
-	// import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 
 	export let mainLogo: string;
+	export let introGif: string;
 	export let mainTag: string = "#AusirioCarmel";
-	export let carauselImages: string[] = [];
 
 	let isShow: boolean = false;
 	let isShowCarausel: boolean = false;
@@ -59,33 +56,14 @@
 		</div>
 	{/if}
 
-	{#if isShowCarausel && carauselImages.length}
+	{#if isShowCarausel}
 		<div in:fade={{ duration: 1000, delay: 1000 }} class="w-screen h-screen z-20 bg-white">
-			<Splide
-				aria-label="invite countdown carausel"
-				options={{
-					arrows: false,
-					pagination: false,
-					type: "fade",
-					gap: "0px",
-					// autoScroll: {
-					// 	rewind: true,
-					// 	pauseOnFocus: false,
-					// 	pauseOnHover: false
-					// },
-					autoWidth: true,
-					autoplay: true,
-					rewind: true,
-					interval: 3000,
-					easing: "ease",
-				}}
-			>
-				{#each carauselImages as image}
-					<SplideSlide>
-						<img src={image} alt="invite" class="object-cover h-screen w-screen" />
-					</SplideSlide>
-				{/each}
-			</Splide>
+			<img
+				src={introGif}
+				alt="invite"
+				class="object-cover h-screen w-screen"
+				transition:fade={{ duration: 1000, delay: 0 }}
+			/>
 		</div>
 	{/if}
 </div>

@@ -29,13 +29,6 @@
 			})
 		: [];
 
-	const parseCarausel = (data: RecordModel): string[] => {
-		const result: string[] = data.intro_images.map((item: string) =>
-			pb.files.getUrl(data, item, { thumb: "1920x1080" }),
-		);
-		return result;
-	};
-
 	onMount(() => {
 		document.body.classList.add("no-scrollbar");
 		document.body.scrollIntoView(true);
@@ -50,7 +43,7 @@
 <div>
 	<Intro
 		mainLogo={pb.files.getUrl(data.response, data.response.main_logo)}
-		carauselImages={parseCarausel(data.response)}
+		introGif={pb.files.getUrl(data.response, data.response.intro_gif_image)}
 	/>
 	<Invite
 		ribbonLogo={pb.files.getUrl(data.response, data.response.ribbon_logo)}
