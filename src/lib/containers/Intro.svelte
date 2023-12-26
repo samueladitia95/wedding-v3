@@ -60,7 +60,7 @@
 	{/if}
 
 	{#if isShowCarausel && carauselImages.length}
-		<div in:fade={{ duration: 1000, delay: 1000 }} class="w-screen h-screen z-20">
+		<div in:fade={{ duration: 1000, delay: 1000 }} class="w-screen h-screen z-20 bg-white">
 			<Splide
 				aria-label="invite countdown carausel"
 				options={{
@@ -77,7 +77,7 @@
 					autoplay: true,
 					rewind: true,
 					interval: 3000,
-					easing: "ease"
+					easing: "ease",
 				}}
 			>
 				{#each carauselImages as image}
