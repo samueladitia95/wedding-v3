@@ -61,7 +61,7 @@
 			<img
 				src={introGif}
 				alt="invite"
-				class="object-cover h-screen w-screen"
+				class="object-cover h-screen w-screen object-bottom"
 				transition:fade={{ duration: 1000, delay: 0 }}
 			/>
 		</div>
