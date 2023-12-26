@@ -38,8 +38,8 @@
 
 	onMount(() => {
 		document.body.classList.add("no-scrollbar");
-		// document.body.scrollIntoView(true);
-		// document.body.classList.add("overflow-hidden");
+		document.body.scrollIntoView(true);
+		document.body.classList.add("overflow-hidden");
 	});
 </script>
 
