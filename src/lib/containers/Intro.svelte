@@ -3,7 +3,7 @@
 	import { fade } from "svelte/transition";
 	import "@splidejs/svelte-splide/css";
 	import { Splide, SplideSlide } from "@splidejs/svelte-splide";
-	import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
+	// import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 
 	export let mainLogo: string;
 	export let mainTag: string = "#AusirioCarmel";
@@ -63,18 +63,20 @@
 		<div in:fade={{ duration: 1000, delay: 1000 }} class="w-screen h-screen z-20">
 			<Splide
 				aria-label="invite countdown carausel"
-				extensions={{ AutoScroll }}
 				options={{
 					arrows: false,
 					pagination: false,
-					type: "loop",
+					type: "fade",
 					gap: "0px",
-					autoScroll: {
-						rewind: true,
-						pauseOnFocus: false,
-						pauseOnHover: false
-					},
+					// autoScroll: {
+					// 	rewind: true,
+					// 	pauseOnFocus: false,
+					// 	pauseOnHover: false
+					// },
 					autoWidth: true,
+					autoplay: true,
+					rewind: true,
+					interval: 3000
 				}}
 			>
 				{#each carauselImages as image}
