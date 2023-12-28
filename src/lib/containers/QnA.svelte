@@ -103,7 +103,7 @@
 			{#each qna as qa, index}
 				{#if isShow}
 					<div
-						class="font-editor-hand flex flex-col"
+						class="font-editor-hand flex flex-col w-full"
 						transition:fly={{ x: -200, duration: 1000, delay: 200 * (index + 1) }}
 					>
 						<button
