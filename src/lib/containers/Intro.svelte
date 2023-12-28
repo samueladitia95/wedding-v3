@@ -3,7 +3,9 @@
 	import { fade } from "svelte/transition";
 
 	export let mainLogo: string;
-	export let introGif: string;
+	export let introGifDesktop: string;
+	export let introGifTablet: string;
+	export let introGifMobile: string;
 	export let mainTag: string = "#AusirioCarmel";
 
 	let isShow: boolean = false;
@@ -59,9 +61,21 @@
 	{#if isShowCarausel}
 		<div in:fade={{ duration: 1000, delay: 1000 }} class="w-screen h-screen z-20 bg-white">
 			<img
-				src={introGif}
+				src={introGifMobile}
 				alt="invite"
-				class="object-cover h-screen w-screen object-bottom"
+				class="object-cover h-screen w-screen object-center md:hidden"
+				transition:fade={{ duration: 1000, delay: 0 }}
+			/>
+			<img
+				src={introGifTablet}
+				alt="invite"
+				class="object-cover h-screen w-screen object-center hidden md:block lg:hidden"
+				transition:fade={{ duration: 1000, delay: 0 }}
+			/>
+			<img
+				src={introGifDesktop}
+				alt="invite"
+				class="object-cover h-screen w-screen object-center hidden lg:block"
 				transition:fade={{ duration: 1000, delay: 0 }}
 			/>
 		</div>

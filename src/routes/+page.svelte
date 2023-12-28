@@ -43,7 +43,9 @@
 <div>
 	<Intro
 		mainLogo={pb.files.getUrl(data.response, data.response.main_logo)}
-		introGif={pb.files.getUrl(data.response, data.response.intro_gif_image)}
+		introGifMobile={pb.files.getUrl(data.response, data.response.intro_gif_image_mobile)}
+		introGifTablet={pb.files.getUrl(data.response, data.response.intro_gif_image_tablet)}
+		introGifDesktop={pb.files.getUrl(data.response, data.response.intro_gif_image_desktop)}
 	/>
 	<Invite
 		ribbonLogo={pb.files.getUrl(data.response, data.response.ribbon_logo)}
