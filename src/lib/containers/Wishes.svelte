@@ -87,7 +87,7 @@
 					<!-- FORM -->
 					<form
 						in:fade={{ duration: 1000, delay: 1000 }}
-						class="mt-4 flex flex-col gap-4"
+						class="mt-4 flex flex-col gap-8"
 						method="post"
 						use:enhance
 					>
