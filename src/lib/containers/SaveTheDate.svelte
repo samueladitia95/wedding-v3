@@ -55,7 +55,7 @@
 				in:fade={{ duration: 1000, delay: 500 }}
 			>
 				<div
-					class="text-ca-creme font-homemade-apple text-3xl/loose md:text-5xl/loose -rotate-12 absolute left-8 -top-28 md:-top-32"
+					class="text-ca-creme font-homemade-apple text-3xl/loose md:text-5xl/loose -rotate-12 absolute left-8 -top-28 md:-top-32 xl:-left-20 xl:-top-20"
 				>
 					<div>Save the date!</div>
 					<div>{weddingDay.format("DD MMM YYYY")}</div>
