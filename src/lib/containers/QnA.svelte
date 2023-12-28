@@ -82,7 +82,7 @@
 </script>
 
 <div
-	class="bg-ca-red min-h-screen w-screen overflow-hidden relative"
+	class="bg-ca-red min-h-screen w-screen overflow-hidden relative py-20"
 	use:inview={{
 		rootMargin: "100px",
 		unobserveOnEnter: true,
