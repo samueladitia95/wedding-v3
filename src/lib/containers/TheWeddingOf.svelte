@@ -22,7 +22,7 @@
 </script>
 
 <div
-	class="bg-ca-creme min-h-screen w-screen overflow-hidden"
+	class="bg-ca-creme min-h-screen w-screen overflow-hidden py-20"
 	use:inview={{
 		rootMargin: "100px",
 		unobserveOnEnter: true,
