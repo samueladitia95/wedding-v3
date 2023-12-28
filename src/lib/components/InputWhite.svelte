@@ -9,7 +9,7 @@
 
 <div class="relative h-11 w-full font-editor-hand">
 	<input
-		placeholder={label}
+		placeholder=""
 		class="peer h-full w-full border-b border-white bg-transparent pt-4 pb-1.5 text-white outline outline-0 transition-all placeholder-shown:border-white focus:text-white focus:outline-0 placeholder:opacity-0 focus:placeholder:opacity-100 md:text-xl focus:bg-transparent"
 		bind:value
 		required
