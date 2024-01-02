@@ -40,7 +40,7 @@
 </script>
 
 <div
-	class="bg-ca-red min-h-screen w-screen overflow-hidden relative xl:min-h-[120vh]"
+	class="bg-ca-red min-h-screen w-screen overflow-hidden relative"
 	use:inview={{
 		rootMargin: "0px",
 		unobserveOnEnter: true,
@@ -50,7 +50,7 @@
 >
 	{#if isShow}
 		<div
-			class="container absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-6 w-full md:mt-10 xl:max-w-xl"
+			class="container absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-6 w-full md:mt-10 xl:max-w-xl lg:relative lg:top-0 lg:left-0 lg:-translate-x-0 lg:translate-y-0 lg:transform-none lg:mt-40 lg:mb-20"
 			in:fade={{ duration: 1000, delay: 500 }}
 		>
 			<div
