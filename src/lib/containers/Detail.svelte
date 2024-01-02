@@ -23,7 +23,7 @@
 		},
 		{
 			icon: scheduleImages[2],
-			event: "Dinner Receptions",
+			event: "Dinner Reception",
 			time: "18.30",
 			isFamilyOnly: false,
 		},
