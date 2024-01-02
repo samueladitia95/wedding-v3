@@ -58,7 +58,6 @@
 		saveTheDateImage={pb.files.getUrl(data.response, data.response.save_the_date_image)}
 	/>
 	<TheWeddingOf
-		weddingDay={dayjs(data.response.wedding_date)}
 		groomImage={pb.files.getUrl(data.response, data.response.groom_image)}
 		brideImage={pb.files.getUrl(data.response, data.response.bride_image)}
 		ringLogo={pb.files.getUrl(data.response, data.response.ring_logo)}

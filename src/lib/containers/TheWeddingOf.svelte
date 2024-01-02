@@ -11,7 +11,7 @@
 	export let brideFullname: string = "Gigi Moersalim";
 	export let brideImage: string;
 	export let brideParent: string = "Andy Moersalim & Jully Pangestu";
-	export let weddingDay: Dayjs;
+	// export let weddingDay: Dayjs;
 	export let ringLogo: string;
 
 	let isShow: boolean = false;
@@ -84,7 +84,8 @@
 				class="font-editor-hand text-ca-orange text-3xl md:text-4xl"
 				in:fade={{ duration: 1000, delay: 2000 }}
 			>
-				{weddingDay.format("DD MMMM YYYY")}
+				<!-- {weddingDay.format("DD MMMM YYYY")} -->
+				24 February 2024
 			</div>
 		</div>
 	{/if}
