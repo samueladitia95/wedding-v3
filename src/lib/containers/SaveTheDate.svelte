@@ -65,7 +65,7 @@
 				class="h-64 md:h-[586px] lg:h-[502px] w-full object-cover rounded"
 			/>
 			<div
-				class="text-ca-creme font-editor-hand text-2xl/loose md:text-4xl/loose absolute bottom-28 -right-2 md:right-4 -rotate-12"
+				class="text-ca-creme font-editor-hand text-2xl/loose md:text-4xl/loose absolute bottom-28 right-2 md:right-4 -rotate-12"
 			>
 				{groomAndBrideName}
 			</div>
