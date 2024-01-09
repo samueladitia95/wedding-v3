@@ -9,7 +9,7 @@ export const load: PageLoad = async ({ url }) => {
 	const page = url.searchParams.get("n") || 1;
 
 	const wishes = await pb.collection("wishes").getList(1, 5 * +page, {
-		filter: 'project = "default" && template_id = "wedding_v2"',
+		filter: 'project = "default" && template_id = "wedding_v3"',
 		sort: "-created",
 	});
 	return {
