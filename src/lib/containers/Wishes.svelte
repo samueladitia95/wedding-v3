@@ -33,7 +33,7 @@
 					const data = {
 						...form.data,
 						project: "default",
-						template_id: "wedding_v2",
+						template_id: "wedding_v3",
 					};
 
 					await pb.collection("wishes").create(data);
