@@ -2,9 +2,11 @@
 	import { inview } from "svelte-inview";
 	import { fade } from "svelte/transition";
 
-	export let qrCodeImage: string;
+	// export let qrCodeImage: string;
 	export let contentText: string =
 		"We require only your presence, but if you feel so moved to give us a gift, we would be very grateful!";
+	export let accountName: string = "Carmel Gigi Moersalim";
+	export let accountNumber: string = "BCA 6041485016";
 
 	let isShow: boolean = false;
 
@@ -31,7 +33,13 @@
 				>
 					{contentText}
 				</div>
-				<img src={qrCodeImage} alt="Qr Code" class="w-48 xl:w-72" />
+				<div
+					class="font-editor-hand text-ca-blue text-center text-2xl/loose md:text-3xl/loose xl:text-4xl/loose"
+				>
+					<div>{accountName}</div>
+					<div>{accountNumber}</div>
+				</div>
+				<!-- <img src={qrCodeImage} alt="Qr Code" class="w-48 xl:w-72" /> -->
 			</div>
 			<div
 				class="bg-ca-orange text-sm xl:text-base font-editor-hand text-ca-creme absolute bottom-0 w-full text-center p-6"

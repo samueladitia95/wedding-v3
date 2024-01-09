@@ -70,5 +70,5 @@
 	<QnA flowerLogo={pb.files.getUrl(data.response, data.response.flower_logo)} />
 	<Rsvp {data} />
 	<Wishes {data} />
-	<QrCode qrCodeImage={pb.files.getUrl(data.response, data.response.qr_code_image)} />
+	<QrCode />
 </div>
