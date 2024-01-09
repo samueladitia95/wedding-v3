@@ -26,14 +26,14 @@
 			event: "Dinner Reception",
 			time: "18.30",
 			isFamilyOnly: false,
+			location: "Gardenia Room, Hotel Gran Mahakam",
+			address: "Jl. Mahakam No.6, Kramat Pela, Kec. Kby. Baru, Jakarta Selatan",
 		},
 		{
 			icon: scheduleImages[3],
 			event: "Drinks",
 			time: "21.00",
 			isFamilyOnly: false,
-			location: "Gardenia Room, Hotel Gran Mahakam",
-			address: "Jl. Mahakam No.6, Kramat Pela, Kec. Kby. Baru, Jakarta Selatan",
 		},
 	];
 	let isShow: boolean = false;
