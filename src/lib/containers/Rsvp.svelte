@@ -42,7 +42,7 @@
 			<div class="font-homemade-apple text-ca-blue text-5xl -rotate-6 mb-8 md:mb-14 lg:mb-24">
 				Rsvp!
 			</div>
-			<div class="font-editor-hand text-ca-orange text-xl md:text-2xl">Due Date : {dueDate}</div>
+			<div style="display: none;" class="font-editor-hand text-ca-orange text-xl md:text-2xl">Due Date : {dueDate}</div>
 
 			<form class="mt-12 flex flex-col gap-10" use:enhance method="POST" action="/">
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-6">
