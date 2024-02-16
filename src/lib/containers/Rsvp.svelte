@@ -7,7 +7,7 @@
 	import Input from "$lib/components/Input.svelte";
 
 	export let data: PageData;
-	export let dueDate: string = "Wednesday, 14 February 2024";
+	export let dueDate: string = "";// "Wednesday, 14 February 2024";
 	let isShow: boolean = false;
 	let isSuccess: boolean = false;
 
